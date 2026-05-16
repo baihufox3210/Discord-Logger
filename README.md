@@ -45,8 +45,8 @@ setx DISCORD_WEBHOOK_AVATAR_URL "https://example.com/webhook.png"
 Add the following lines to your shell configuration file (`~/.bashrc`, `~/.zshrc`, or `~/.profile`):
 
 ```bash
-export DISCORD_OWNER_AVATAR_URL="https://example.com/owner.png"
-export DISCORD_WEBHOOK_AVATAR_URL="https://example.com/webhook.png"
+echo 'export DISCORD_OWNER_AVATAR_URL="https://example.com/owner.png"' >> ~/.bashrc
+echo 'export DISCORD_WEBHOOK_AVATAR_URL="https://example.com/webhook.png"' >> ~/.bashrc
 ```
 
 Then reload configuration:
