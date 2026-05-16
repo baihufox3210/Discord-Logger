@@ -7,32 +7,22 @@ requires-python = ">=3.10"
 license = { file = "LICENSE" }
 
 authors = [
-    {
-        name = "baihu",
-        email = "baihu3210@gmail.com"
-    }
+  { name = "baihu", email = "baihu3210@gmail.com" }
 ]
 
-keywords = [
-    "discord",
-    "logger"
-]
+keywords = ["discord", "logger"]
 
 classifiers = [
-    "Development Status :: 4 - Beta",
-
-    "Intended Audience :: Developers",
-
-    "License :: OSI Approved :: MIT License",
-
-    "Programming Language :: Python :: 3",
-
-    "Topic :: Software Development :: Libraries",
-    "Topic :: System :: Logging"
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: System :: Logging"
 ]
 
 dependencies = [
-    "requests>=2.32.0"
+  "requests>=2.32.0"
 ]
 
 [project.urls]
@@ -41,15 +31,11 @@ Repository = "https://github.com/baihufox3210/Discord-Logger"
 Issues = "https://github.com/baihufox3210/Discord-Logger/issues"
 
 [build-system]
-requires = [
-    "setuptools>=68",
-    "wheel"
-]
-
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-package-dir = { "" = "src" }
+package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
