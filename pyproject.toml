@@ -1,0 +1,55 @@
+[project]
+name = "baihu-discord-logger"
+version = "0.1.0"
+description = "Simple Discord webhook logger for Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
+authors = [
+    {
+        name = "baihu",
+        email = "baihu3210@gmail.com"
+    }
+]
+
+keywords = [
+    "discord",
+    "logger"
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+
+    "Intended Audience :: Developers",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Programming Language :: Python :: 3",
+
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Logging"
+]
+
+dependencies = [
+    "requests>=2.32.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/baihufox3210/Discord-Logger"
+Repository = "https://github.com/baihufox3210/Discord-Logger"
+Issues = "https://github.com/baihufox3210/Discord-Logger/issues"
+
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel"
+]
+
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
