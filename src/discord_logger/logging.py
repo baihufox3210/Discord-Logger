@@ -5,6 +5,7 @@ from enum import IntEnum
 from datetime import datetime, timezone
 
 class Color(IntEnum):
+    SUCCESS = 0x2ECC71
     DEBUG = 0x95A5A6
     INFO = 0x3498DB
     WARNING = 0xF1C40F
@@ -49,6 +50,9 @@ class DiscordLogger:
         
         try: requests.post(self.webhook_url, json = payload, timeout = self.timeout)
         except Exception as e: print(e)
+        
+    def success(self, title: str, description: str):
+        self._send(title = title, description = description, color = Color.SUCCESS)
         
     def debug(self, title: str, description: str):
         self._send(title = title, description = description, color = Color.DEBUG)
