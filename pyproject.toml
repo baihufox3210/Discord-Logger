@@ -1,6 +1,6 @@
 [project]
 name = "baihu-discord-logger"
-version = "0.1.0"
+version = "0.1.1"
 description = "Simple Discord webhook logger for Python"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,7 +22,7 @@ classifiers = [
 ]
 
 dependencies = [
-  "requests>=2.32.0"
+  "requests"
 ]
 
 [project.urls]

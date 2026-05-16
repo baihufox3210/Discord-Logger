@@ -1,3 +1,4 @@
+import os
 import requests
 
 from enum import IntEnum
@@ -11,19 +12,17 @@ class Color(IntEnum):
     CRITICAL = 0x992D22
 
 class DiscordLogger:
-    def __init__(
-        self, webhook_url: str, timeout: int = 5,
-        owner_name: str = "baihu", owner_avatar: str = "https://github.com/baihufox3210/abnormal/blob/main/owner_avatar.jpg?raw=true", 
-        webhook_name: str = "logging", webhook_avatar: str = "https://github.com/baihufox3210/abnormal/blob/main/webhook_avatar.webp?raw=true"
-    ):
+    def __init__(self, webhook_url: str, timeout: int = 5, owner_name: str = "baihu", webhook_name: str = "logging", owner_avatar: str = None, webhook_avatar: str = None):
         self.webhook_url = webhook_url
-        self.timeout = timeout
+        if not self.webhook_url: raise ValueError("discord webhook url is missing")
         
         self.owner_name = owner_name
-        self.owner_avatar = owner_avatar
+        self.owner_avatar = owner_avatar or os.getenv("DISCORD_OWNER_AVATAR_URL")
         
         self.webhook_name = webhook_name
-        self.webhook_avatar = webhook_avatar
+        self.webhook_avatar = webhook_avatar or os.getenv("DISCORD_WEBHOOK_AVATAR_URL")
+        
+        self.timeout = timeout
         
     def _truncate(self, text: str, limit: int) -> str:
         if len(text) <= limit: return text
